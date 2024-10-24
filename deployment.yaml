@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: netflix
+  name: netflix
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: netflix
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: netflix
+    spec:
+      containers:
+      - image: paingsoe123/netflix
+        name: netflix
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
